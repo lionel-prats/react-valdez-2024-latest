@@ -1,0 +1,8 @@
+- npm create vite@altest
+* crear un proyecto react con la version mas reciente de vite
+
+- npm install
+* instalar /node_modules
+
+- npm run dev
+* levantar servidor de desarrollo

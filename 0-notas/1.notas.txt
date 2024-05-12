@@ -1,0 +1,220 @@
+Sección 4: PROYECTO: Carrito de Compras - Creando el Proyecto en Windows
+49. Creando el Primer Proyecto (11/5/24)
+
+1. creo el proyecto "guitarla" vvv 
+
+User@DESKTOP-0VF0DF8 MINGW64 ~/Desktop/cursos/valdez-2024-latest
+$ npm create vite@latest
+Need to install the following packages:
+create-vite@5.2.3
+Ok to proceed? (y) y
+√ Project name: ... guitarla
+
+? Select a framework: » - Use arrow-keys. Return to submit.
+    Vanilla
+    Vue
+>   React
+    Preact
+    Lit
+    Svelte
+    Solid
+    Qwik
+    Others
+
+? Select a variant: » - Use arrow-keys. Return to submit.
+    TypeScript
+    TypeScript + SWC
+    JavaScript
+>   JavaScript + SWC    // SWC es un compilador
+    Remix ↗
+
+Scaffolding project in C:\Users\User\Desktop\cursos\valdez-2024-latest\guitarla...
+
+Done. Now run:
+
+  cd guitarla
+  npm install
+  npm run dev
+
+2. corro los comandos que me indica la terminal vvv 
+
+User@DESKTOP-0VF0DF8 MINGW64 ~/Desktop/cursos/valdez-2024-latest
+$ cd guitarla
+
+User@DESKTOP-0VF0DF8 MINGW64 ~/Desktop/cursos/valdez-2024-latest/guitarla
+$ npm install
+... 
+
+User@DESKTOP-0VF0DF8 MINGW64 ~/Desktop/cursos/valdez-2024-latest/guitarla
+$ npm run dev // para iniciar un servidor de desarrollo (default puerto 5173) 
+...
+-> http://localhost:5173/
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+52. La Estructura de archivos de React
+
+/src/App.jsx (function App())       
+    * componente principal de nuestra aplicacion
+-> /src/main.jsx                    
+    * carga el componente principal de nuestra aplicacion (function App()) en <div id="root">
+-> /src/index.css                
+    * hoja de estilos global a todo el proyecto, cargada en /src/main.jsx
+-> /index.html (<div id="root">)    
+    * es el elemento HTML donde desde /src/main.jsx se inyecta todo el codigo de nuestra aplicacion
+
+----- 
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+53. Copiando el código HTML estatico a React
+
+1. descargue el zip con los materiales
+    * se traba de un archivo html con estilos, que muestra una galeria de fotos de guitarras
+    * deje esta carpeta ubicada en vvv
+    * /Desktop/cursos/valdez-2024-latest/1-materiales-del-curso/01-GuitarLA-HTMLCSS-Inicio/01-GuitarLA-HTMLCSS-Inicio
+2. reemplaze la carpeta /public del proyecto react por la carpeta /public de los materiales descargado 
+    * esta carpeta /public viene con la carpeta /img y dentro todas las imagenes de las guitarras
+3. en el /index.html del proyecto React, hice copy-paste de los siguientes <links> del index.html de los materiales, vvv 
+    * "https://fonts.googleapis.com"
+    * "https://fonts.gstatic.com"
+    * "https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap"
+4. en el /src/index.css del proyecto React, hice un copy-paste del contenido del index.css de los materiales
+5. dentro del contenedor del return(<>...</>), en el componente principal de mi aplicacion React ( function App() ), hice un copy-paste de los siguientes elementos html del index.html de los materiales vvv
+    * <header>
+    * <main>
+    * <footer>
+
+- con estos cambios, mi aplicacion React renderiza lo mismo que el index.html de los materiales descargados
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+56. ¿Qué es JSX?
+
+- JSX = JavaScript Sintax Extension
+- es una extension del lenguaje desarrollada por Meta (Facebook) para React
+- es una sintaxis que permite escribir HTML y JS en un mismo lugar
+- es un lenguaje de templates/vistas que muestra HTML pero tiene todas las funciones de JS
+- una vez compilado, son archivos JS con funciones y objetos (imagino que es un analogo a SCSS y CSS)
+
+----- 
+
+- anatomia de un componente vvv 
+- codigo fuente del componente App.jsx vvv 
+
+// imporatcion de componentes o librerias
+import { Fragment } from 'react'
+...
+
+// componente vvv
+function App() {
+    // state o funciones vvv 
+    const total = 100
+    ...
+    
+    // return (HTML/vista) vvv
+    return (  
+        <Fragment>
+            <p>Total a pagar {total}</p>
+            ...
+        </Fragment>
+    )
+}
+
+export default App
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+59. Introducción a los React Hooks
+
+- los hooks, al igual que los componentes, son la parte mas importante de react 
+- los hooks permiten usar las diferentes funciones de react en tus componentes (nos van a permitir integrar todas las funcionalidades de react con nuestra interfaz)
+- react tiene una serie de hooks pero tambien puedo crear mis propios hooks 
+- los hooks estan disponibles desde la version 16.8, previo a esta version se tenian que crear Classes para crear y modificar el state, con los Hooks no es necesario
+    * la version react de "guitarla" es 18.2.0 (la data esta en el package.json, en "dependencies") 
+
+- los hooks se dividen en basicos y adicionales 
+
+- hooks disponibles en react vvv
+
+BASICOS
+* useState  
+* useEffect
+* useContext
+
+ADICIONALES
+* useReducer
+* useCallback
+* useMemo
+* useRef
+* useImperativeHandle
+* useLayoutEffect
+* useInsertionEffect
+* useTransition
+* useDeferredValue
+* useId
+* useSyncExternalStore
+
+- tambien es posible crear tus propios hooks, de esta forma podras separar tu codigo en funciones reutilizables y sacar todo el beneficionde de lo que React ofrece 
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+60. ¿Qué es el State en React? y useState
+
+- que es el state o el estado en react? vvv 
+
+- el state es la pieza central de react, es practicamente el tema mas importante que vas a encontrar en react 
+
+- el estado es una variable con informacion relevante en nuestra aplicacion de react
+- algunas veces el state pertenece a un componente en especifico o algunas veces deseas compartirlo a lo largo de diferentes componentes
+- piensa en el state como el resultado de alguna interaccion en el sitio o aplicacion web 
+
+- el state es creado con el hook useState()
+
+- ejemplo en el componente ficticion Fake.jsx vvv 
+
+import { useState } from "react"
+
+export default function Guitar() {
+
+    const [customer, setCustomer] = useState({}) // su valor inicial va a ser un objeto vacio
+    // useState siempre va a retornarnos un arreglo (estamos aplicando arrayDestructuring)
+    // estoy nombrando mi state commo "customer" y tambien estamos utilizando "setCustomer"
+    // este "set" es una convencion que existe en react
+    // "customer" es el state, "setCustomer" es la funcion que modifica el state
+    // siempre vamos a utilizar la funcion "setCustomer" cada vez que querramos realizar cambios en el state "customer"
+
+    const [total, setTotal] = useState(0) // su valor inicial va a ser cero
+    // "total" es el state, "setTotal" es la funcion que modifica el state
+    // siempre vamos a utilizar la funcion "setTotal" cada vez que querramos realizar cambios en el state "total"
+
+    const [products, setProducts] = useState([]) // su valor inicial va a ser un arreglo vacio
+    // "products" es el state, "setProducts" es la funcion que modifica el state
+    // siempre vamos a utilizar la funcion "setProducts" cada vez que querramos realizar cambios en el state "products"
+    
+    const [modal, setModal] = useState(false) // su valor inicial va a ser el bool false
+    // "modal" es el state, "setModal" es la funcion que modifica el state
+    // siempre vamos a utilizar la funcion "setModal" cada vez que querramos realizar cambios en el state "modal"
+    
+    return ( 
+        <h1>Hola mundo</h1>
+    )
+}
+
+- entonce, useState es el hook que nos da react y nos retorna 3 partes: 
+* state 
+* funcion 
+* valor inicial 
+
+- react reacciona en base a nuestro state 
+- cada vez que tu state cambia, tu aplicacion de react va a renderizar y actualizarse con esos cambios, no es necesario hacer nada mas y tu interfaz siempre estara sincronizada con el state.
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+61. Reglas de los Hooks
+
+...
