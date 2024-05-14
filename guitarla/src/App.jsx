@@ -5,28 +5,22 @@
 import { useState } from 'react'
 import Guitar from './components/Guitar'
 import Header from './components/Header'
+import { db } from './data/db'
 
 function App() {
-
-    const [auth, setAuth] = useState(false)
+    const [data, setData] = useState(db)
     return (
     <>
         <Header /> 
         <main className="container-xl mt-5">
             <h2 className="text-center">Nuestra Colección</h2>
             <div className="row mt-5">
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
-                <Guitar />
+                {data.map(() => (
+                    <Guitar 
+                        price={100}
+                        nombre={"lionel"}
+                    />
+                ))}
             </div>
         </main>
         <footer className="bg-dark mt-5 py-5">

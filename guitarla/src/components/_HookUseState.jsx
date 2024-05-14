@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Guitar() {
+export default function _HookUseState() {
 
     const [customer, setCustomer] = useState({}) // su valor inicial va a ser un objeto vacio
     // useState siempre va a retornarnos un arreglo (estamos aplicando arrayDestructuring)

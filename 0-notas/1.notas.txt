@@ -178,7 +178,7 @@ Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a H
 
 import { useState } from "react"
 
-export default function Guitar() {
+export default function Fake() {
 
     const [customer, setCustomer] = useState({}) // su valor inicial va a ser un objeto vacio
     // useState siempre va a retornarnos un arreglo (estamos aplicando arrayDestructuring)
@@ -204,7 +204,7 @@ export default function Guitar() {
     )
 }
 
-- entonce, useState es el hook que nos da react y nos retorna 3 partes: 
+- entonces, useState es el hook que nos da react y nos retorna 3 partes: 
 * state 
 * funcion 
 * valor inicial 
@@ -212,9 +212,90 @@ export default function Guitar() {
 - react reacciona en base a nuestro state 
 - cada vez que tu state cambia, tu aplicacion de react va a renderizar y actualizarse con esos cambios, no es necesario hacer nada mas y tu interfaz siempre estara sincronizada con el state.
 
+- instalé en chrome la herramienta React Developer Tools (al 12/5/24 disponible para Chrome y Firefox)
+
 ----------------------------------------
 
 Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
 61. Reglas de los Hooks
 
-...
+1. los hooks se colocan en la parte superior de tus componentes de react 
+2. no se deben colocar dentro de condicionales, tampoco despues de un return 
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+62. ¿Qué es useEffect?
+
+- useEffect es el segundo hook que mas vamos a utilizar luego de useState
+- useEffect siempre es un callback, que dependiendo como lo declares va a realizar diferentes acciones
+- es el sustituto de lo que antes era componentDidMount() y componentDidUpdate() (conocidos como metodos del ciclo de vida de un componente en versiones anteriores de react, pero que hoy en dia ya no se utilizan)
+
+----- 
+
+- Usos de useEffect vvv
+* useEffect se ejecuta automaticamente cuando el componente esta listo 
+* es un buen lugar para colocar codigo para consultar a alguna API o para LocalStorage 
+* debido a que le podemos pasar una dependencia, y esta dependencia va a ser un state, useEffect va a estar escuchando por los cambios que sucedan en esa variable o en ese state y podemos actualizar el componente o ejecutar ciertas funciones cuando ese cambio ocurra
+* dependiendo del valor que pasemos en el array de dependencias (o no pasemos nada) este hook va a hacer algo diferente
+
+import { useState, useEffect } from "react"
+
+----- 
+
+- ejemplo basico del uso del hook useEffect (/src/components/_HookUseEffect.jsx) vvv 
+
+import { useState, useEffect } from "react"
+
+export default function _HookUseEffect() {
+    const [auth, setAuth] = useState(false)
+    useEffect( () => {
+        if(auth) {
+            console.log("autenticado");
+        }
+    }, [auth])
+    setTimeout(() => {
+        setAuth(true)
+    }, 3000);
+    return ( 
+        <h1>Hola mundo</h1>
+    )
+}
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+64. Iterando sobre los Productos en React
+
+- dentro del return de un componente podemos usar Expressions, pero no Statementes 
+
+- Statements y Expresiones en JavaScript
+
+- Statements en JS
+* una app de JavaScript tiene una serie de statements 
+* un statement es una instruccion para hacer algo
+
+- algunos statements comunes en JavaScript:
+* creacion de variables
+* codigo condicionales con if
+* lanzar errores con throw new Error()
+* iterar con while o for
+
+- Expressions en JS
+* una expresion es algo que produce un valor
+
+- algunas Expressions comunes en JavaScript:
+* ternarios
+* utilizar un array method que genere un nuevo array (un filter, un map, etc)
+* .map que genera un nuevo array a diferencia de forEach 
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+65. ¿Qué son los Props?
+
+- los props es una forma de compartir informacion entre componentes 
+- los componentes de react utilizan props para comunicarse entre ellos
+- se puede pasar informacion de un componente padre a un componente hijo por medio de estos props
+- los props son similares a los atributos HTML, pero por medio de estos podemos pasar arrays, objetos o funciones
+- los props solo se pueden pasar de padres a hijos

@@ -5,4 +5,4 @@
 * instalar /node_modules
 
 - npm run dev
-* levantar servidor de desarrollo
+* levantar servidor de desarrollo (apunta al script "dev" definido en el package.json)
