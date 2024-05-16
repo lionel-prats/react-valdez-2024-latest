@@ -73,7 +73,7 @@ Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a H
     * se traba de un archivo html con estilos, que muestra una galeria de fotos de guitarras
     * deje esta carpeta ubicada en vvv
     * /Desktop/cursos/valdez-2024-latest/1-materiales-del-curso/01-GuitarLA-HTMLCSS-Inicio/01-GuitarLA-HTMLCSS-Inicio
-2. reemplaze la carpeta /public del proyecto react por la carpeta /public de los materiales descargado 
+2. reemplaze la carpeta /public del proyecto react por la carpeta /public de los materiales descargados 
     * esta carpeta /public viene con la carpeta /img y dentro todas las imagenes de las guitarras
 3. en el /index.html del proyecto React, hice copy-paste de los siguientes <links> del index.html de los materiales, vvv 
     * "https://fonts.googleapis.com"
@@ -299,3 +299,10 @@ Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a H
 - se puede pasar informacion de un componente padre a un componente hijo por medio de estos props
 - los props son similares a los atributos HTML, pero por medio de estos podemos pasar arrays, objetos o funciones
 - los props solo se pueden pasar de padres a hijos
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+66. Mostrando la Información de cada Guitarra
+
+...

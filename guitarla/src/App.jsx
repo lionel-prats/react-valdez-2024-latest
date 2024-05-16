@@ -8,17 +8,22 @@ import Header from './components/Header'
 import { db } from './data/db'
 
 function App() {
+
+    // data = array de objetos en /src/data/db.js
     const [data, setData] = useState(db)
+    
     return (
     <>
         <Header /> 
         <main className="container-xl mt-5">
             <h2 className="text-center">Nuestra Colección</h2>
             <div className="row mt-5">
-                {data.map(() => (
-                    <Guitar 
-                        price={100}
-                        nombre={"lionel"}
+                {data.map((guitar) => (
+                    <Guitar
+                        // en una iteracion en la que pasamos props siempre debemos pasar el prop especial "key" con un valor unico (v66)
+                        key={guitar.id}
+                        guitar={guitar}
+                        // name={guitar.name}
                     />
                 ))}
             </div>
