@@ -303,6 +303,35 @@ Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a H
 ----------------------------------------
 
 Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
-66. Mostrando la Información de cada Guitarra
+67. Eventos en JSX
+
+- sobre los eventos en react vvv 
+
+- la forma en que react maneja los eventos del navegador es muy similar a como se hace en JS puro, pero con algunos cambios 
+- los eventos se escriben en camelCase
+    - onChange
+    - onClick
+- forma de invocar un evento en JSX
+    <button onClick={ getLatestOrders() }>
+        Descargar Pedidos
+    </button>
+    *** getLatestOrders() puede encontrarse antes del return en el mismo componente o puede estar en otro archivo 
+    *** usualmente se recomienda que este en un hook personalizado o en el mismo componente
+    <form onClick={ handleSubmit() }>
+        <button type="submit">
+            Anadir Cliente
+        </button>
+    </form>
+
+----------------------------------------
+
+Sección 6: PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más
+70. Detectar si un elemento existe en el carrito
+
+- Enlace con todos los array methods de JS donde nos indica cuales modifican (mutan) el state original y cuales no
+
+https://doesitmutate.xyz/
+
+----------------------------------------
 
 ...

@@ -1,0 +1,75 @@
+S1  : Introducción al curso - Qué es React, Proyectos que construiremos y más       | 37 
+S2  : Introducción a JavaScript para React                                          | -
+S3  : PROYECTO: Carrito de Compras - Introducción y Herramientas                    | 4
+S4  : PROYECTO: Carrito de Compras - Creando el Proyecto en Windows                 | 8
+S5  : PROYECTO: Carrito de Compras - Creando el Proyecto en Mac                     | -   | 49 minutos | 0 horas 49 minutos 
+S6  : PROYECTO: Carrito de Compras - Creando el Carrito, introducción a Hooks y más | 176 
+
+S7  : xxx                                                                           | xxx 
+S8  : xxx                                                                           | xxx 
+S9  : xxx                                                                           | xxx 
+S10 : xxx                                                                           | xxx 
+S11 : xxx                                                                           | xxx 
+S12 : xxx                                                                           | xxx 
+S13 : xxx                                                                           | xxx 
+S14 : xxx                                                                           | xxx 
+S15 : xxx                                                                           | xxx 
+S16 : xxx                                                                           | xxx 
+S17 : xxx                                                                           | xxx 
+S18 : xxx                                                                           | xxx 
+S19 : xxx                                                                           | xxx 
+S20 : xxx                                                                           | xxx 
+S21 : xxx                                                                           | xxx 
+S22 : xxx                                                                           | xxx 
+S23 : xxx                                                                           | xxx 
+S24 : xxx                                                                           | xxx 
+S25 : xxx                                                                           | xxx 
+S26 : xxx                                                                           | xxx 
+S27 : xxx                                                                           | xxx 
+S28 : xxx                                                                           | xxx 
+S29 : xxx                                                                           | xxx 
+S30 : xxx                                                                           | xxx 
+S31 : xxx                                                                           | xxx 
+S32 : xxx                                                                           | xxx 
+S33 : xxx                                                                           | xxx 
+S34 : xxx                                                                           | xxx 
+S35 : xxx                                                                           | xxx 
+S36 : xxx                                                                           | xxx 
+S37 : xxx                                                                           | xxx 
+S38 : xxx                                                                           | xxx 
+S39 : xxx                                                                           | xxx 
+S40 : xxx                                                                           | xxx 
+S41 : xxx                                                                           | xxx 
+S42 : xxx                                                                           | xxx 
+S43 : xxx                                                                           | xxx 
+S44 : xxx                                                                           | xxx 
+S45 : xxx                                                                           | xxx 
+S46 : xxx                                                                           | xxx 
+S47 : xxx                                                                           | xxx 
+S48 : xxx                                                                           | xxx 
+S49 : xxx                                                                           | xxx 
+S50 : xxx                                                                           | xxx 
+S51 : xxx                                                                           | xxx 
+S52 : xxx                                                                           | xxx 
+S53 : xxx                                                                           | xxx 
+S54 : xxx                                                                           | xxx 
+S55 : xxx                                                                           | xxx 
+S56 : xxx                                                                           | xxx 
+S57 : xxx                                                                           | xxx 
+S58 : xxx                                                                           | xxx 
+S59 : xxx                                                                           | xxx 
+S60 : xxx                                                                           | xxx 
+S61 : xxx                                                                           | xxx 
+S62 : xxx                                                                           | xxx 
+S63 : xxx                                                                           | xxx 
+S64 : xxx                                                                           | xxx 
+S65 : xxx                                                                           | xxx 
+S66 : xxx                                                                           | xxx 
+S67 : xxx                                                                           | xxx 
+S68 : xxx                                                                           | xxx 
+S69 : xxx                                                                           | xxx 
+S70 : xxx                                                                           | xxx 
+
+realizado ->   49 minutos | 0  horas 49 minutos | (xxxxx%) 
+pendiente -> xxxx minutos | xx horas xx minutos | (xxxxx%)
+total     -> xxxx minutos | xx horas xx minutos | (100%)

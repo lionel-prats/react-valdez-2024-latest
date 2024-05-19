@@ -10,20 +10,45 @@ import { db } from './data/db'
 function App() {
 
     // data = array de objetos en /src/data/db.js
-    const [data, setData] = useState(db)
+    const [data, setData] = useState(db);
+    const [cart, setCart] = useState([]); // v68
     
+
+    // const array1 = [5, 12, 8, 130, 44];
+    // const isLargeNumber = (element) => element == 44;
+    // console.log(array1.findIndex(isLargeNumber));
+    
+    function addToCart(item) { // v69
+        const itemExists = cart.findIndex(element => element.id === item.id)
+        if(itemExists === -1) {
+            item.quantity = 1;
+            // setCart(prevCart => [...prevCart, item]);
+            setCart([...cart, item])
+        } else {
+            // const updatedCart = cart;
+            const updatedCart = [...cart];
+            updatedCart[itemExists].quantity++;
+            setCart(updatedCart);
+        }
+    }
+
     return (
     <>
-        <Header /> 
+        <Header 
+            cart={cart}
+        /> 
         <main className="container-xl mt-5">
             <h2 className="text-center">Nuestra Colección</h2>
             <div className="row mt-5">
                 {data.map((guitar) => (
                     <Guitar
-                        // en una iteracion en la que pasamos props siempre debemos pasar el prop especial "key" con un valor unico (v66)
+                        // en una iteracion en la que pasamos props siempre debemos pasar el prop especial "key" con un valor unico (siempre es buena idea pasar los id cuando existen) (v66)
                         key={guitar.id}
                         guitar={guitar}
                         // name={guitar.name}
+                        // cart={cart} // v68
+                        // setCart={setCart} // v68
+                        addToCart={addToCart} // v69
                     />
                 ))}
             </div>
